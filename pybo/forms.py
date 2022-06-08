@@ -7,8 +7,7 @@ class QuestionForm(FlaskForm):
     content = TextAreaField('내용', validators=[DataRequired('내용은 필수 입력 항목입니다.')])
 
 class AnswerForm(FlaskForm):
-    content = TextAreaField('내용', validators=[
-        DataRequired('내용은 필수 입력 항목입니다.')])
+    content = TextAreaField('내용', validators=[DataRequired('내용은 필수 입력 항목입니다.')])
 
 class UserCreateForm(FlaskForm):
     username = StringField('사용자이름', validators=[DataRequired(), Length(min=3, max=25)])

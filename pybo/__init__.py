@@ -16,7 +16,7 @@ def create_app():
     migrate.init_app(app, db) # 초기화 시켜서 다른 곳 에서도 불러서 쓸 수 있음
     from . import models
 
-    # 블루프린트
+    # 블루프린트 객체 bp 등록
     from .views import main_views, question_views, answer_views, auth_views
     app.register_blueprint(main_views.bp)
     app.register_blueprint(question_views.bp)
